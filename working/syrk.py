@@ -91,12 +91,3 @@ def syrk(uplo: bool, trans: bool, alpha: float, A: list, beta: int, C: list):
                         C[i][j] = alpha*temp + beta*C[i][j]
 
     return C
-
-
-
-def transpose(M: list) -> list:
-    M_t = list(np.zeros((len(M[0]), len(M))))
-    for i in range(len(M)):
-        for j in range(len(M[i])):
-            M_t[j][i] = M[i][j]
-    return M_t
