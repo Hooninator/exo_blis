@@ -1,6 +1,4 @@
 """
-SPMV implementation using EXO -- Author: Julian Bellavita
-Implementation details: https://www.osti.gov/servlets/purl/891708
 """
 ### Imports
 from __future__ import annotations
