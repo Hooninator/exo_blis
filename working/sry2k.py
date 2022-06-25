@@ -8,7 +8,7 @@ def SYR2K(A, B, C, alpha, beta, uplo, trans):
     assert uplo=='U' or uplo=='L'
 
     n = len(C)
-    k = len(A[0])
+    k = len(A) if trans else len(A[0])
 
     assert n > 0
     assert k > 0
