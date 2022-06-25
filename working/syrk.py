@@ -6,7 +6,7 @@ def syrk(uplo: bool, trans: bool, alpha: float, A: list, beta: int, C: list):
     
     n = len(C)
     k = len(A[0]) 
-    
+
     #transposed matrix dimensions
     n_t = len(A[0])
     k_t = len(C) 
@@ -53,7 +53,8 @@ def syrk(uplo: bool, trans: bool, alpha: float, A: list, beta: int, C: list):
                     for i in range(j):
                         C[i][j] = 0
                 elif beta!=1:
-                    C[i][j] = beta*C[i][j]
+                    for i in range(j):
+                        C[i][j] = beta*C[i][j]
                 for l in range(k):
                     for i in range(j):
                         C[i][j] = C[i][j] + alpha*A[i][l]*A[j][l]
@@ -63,7 +64,8 @@ def syrk(uplo: bool, trans: bool, alpha: float, A: list, beta: int, C: list):
                     for i in range(j, n):
                         C[i][j] = 0
                 elif beta!=1:
-                    C[i][j] = beta*C[i][j]
+                    for i in range(j, n):
+                        C[i][j] = beta*C[i][j]
                 for l in range(k):
                     for i in range(j, n):
                         C[i][j] = C[i][j] + alpha*A[i][l]*A[j][l]
