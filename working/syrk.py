@@ -6,6 +6,7 @@ def syrk(uplo: bool, trans: bool, alpha: float, A: list, beta: int, C: list):
     
     n = len(C)
     k = len(A[0]) 
+    
     #transposed matrix dimensions
     n_t = len(A[0])
     k_t = len(C) 

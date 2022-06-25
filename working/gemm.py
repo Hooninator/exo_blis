@@ -17,7 +17,7 @@ def gemm(transpose_A: bool, transpose_B: bool, alpha: float, A: list,
         
         
         #quick return if certain parameters are 0
-        if m==0 or n==0 or k==0 or alpha==0 or beta==0:
+        if m==0 or n==0 or ((k==0 or alpha==0) and beta==1):
             return C
 
         #Alpha is zero, so A*B becomes 0
