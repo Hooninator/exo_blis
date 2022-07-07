@@ -1,4 +1,5 @@
 /* Trying to cast other level 3 BLAS operations in terms of GEMM and special blocking procedures */
+/* NOTE: This is totally untested and almost certainly does not work. This was mostly just to organize my thoughts. */
 
 #include <stdio.h>
 #include <stdlib.h>
